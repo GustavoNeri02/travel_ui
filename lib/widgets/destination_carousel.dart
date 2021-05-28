@@ -141,10 +141,10 @@ class DestinationCarousel extends StatelessWidget {
                                   Row(
                                     children: [
                                       Icon(FontAwesomeIcons.locationArrow,
-                                          size: 10, color: Colors.white),
+                                          size: 10, color: Colors.white70),
                                       Text(
                                         destinations[index].country,
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(color: Colors.white70),
                                       ),
                                     ],
                                   )
