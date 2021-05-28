@@ -130,13 +130,15 @@ class _DestinationScreenState extends State<DestinationScreen> {
           ),
           Expanded(
             child: ListView.builder(
+                physics: BouncingScrollPhysics(),
+                padding: EdgeInsets.only(top: 10, bottom: 20),
                 itemCount: widget.destination.activities.length,
                 itemBuilder: (BuildContext context, int index) {
                   Activity activity = widget.destination.activities[index];
                   return Stack(
                     children: [
                       Container(
-                        margin: EdgeInsets.fromLTRB(40, 5, 20, 5),
+                        margin: EdgeInsets.fromLTRB(50, 5, 20, 5),
                         height: 170,
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -195,6 +197,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                               Row(
                                 children: [
                                   Container(
+                                    padding: EdgeInsets.all(5),
                                     width: 70,
                                     decoration: BoxDecoration(
                                       color: Theme.of(context).accentColor,
@@ -209,6 +212,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                     width: 10,
                                   ),
                                   Container(
+                                    padding: EdgeInsets.all(5),
                                     width: 70,
                                     decoration: BoxDecoration(
                                       color: Theme.of(context).accentColor,
@@ -225,6 +229,19 @@ class _DestinationScreenState extends State<DestinationScreen> {
                           ),
                         ),
                       ),
+                      Positioned(
+                        left: 20,
+                        top: 15,
+                        bottom: 15,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            activity.imageUrl,
+                            width: 110,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
                     ],
                   );
                 }),

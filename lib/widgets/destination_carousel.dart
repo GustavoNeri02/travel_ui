@@ -41,6 +41,7 @@ class DestinationCarousel extends StatelessWidget {
         Container(
           height: 300,
           child: ListView.builder(
+            physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemCount: destinations.length,
             itemBuilder: (BuildContext context, int index) {
