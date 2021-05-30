@@ -206,6 +206,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                     child: Text(
                                       activity.startTimes[0],
                                       textAlign: TextAlign.center,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                   SizedBox(
@@ -221,6 +222,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                     child: Text(
                                       activity.startTimes[1],
                                       textAlign: TextAlign.center,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   )
                                 ],

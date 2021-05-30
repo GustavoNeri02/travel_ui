@@ -92,6 +92,8 @@ class DestinationCarousel extends StatelessWidget {
                                 Text(
                                   "${destinations[index].description}",
                                   style: TextStyle(color: Colors.grey),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                 )
                               ],
                             ),
